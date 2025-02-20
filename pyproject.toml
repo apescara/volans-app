@@ -1,0 +1,9 @@
+[project]
+version = "0.1"
+name = "volansapp"
+description = "volas web app for data upload"
+dependencies = ["flask", "pandas", "openpyxl"]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"

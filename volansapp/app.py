@@ -1,27 +1,25 @@
-# Importing required functions
-import pandas
-from flask import Flask, render_template, request
-from fileinput import filename
+from volansapp import app
 
-# Flask constructor
-app = Flask(__name__)
+# Importing required functions
+from flask import render_template, request
+
 
 # Root endpoint
-
-
 @app.get("/")
 @app.route("/index")
 def index():
     return render_template("index.html")
 
 
-@app.post("/upload-citas")
-def upload_citas():
-    return render_template("upload-citas.html")
+@app.post("/citas_upload")
+def citas_upload():
+    return render_template("citas/upload.html")
 
 
-@app.post("/view-citas")
-def view_citas():
+@app.post("/citas_view")
+def citas_view():
+
+    import pandas
 
     # Read the File using Flask request
     file = request.files["file"]

@@ -11,10 +11,10 @@ Estoy aburrido y quiero aprender a usar flask, asi que voy a usar la clinica de 
 Instalacion:
 
 ```bash
-pyenv virtualenv venv
-pyenv activate venv
+pyenv virtualenv volansapp
+pyenv activate volansapp
 
-pip install -r requirements.txt
+python install .
 ```
 
 ### Tailwind
@@ -29,4 +29,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 nvm install node
 ```
 
-segui el ejemplo de: [tailwind](https://tailwindcss.com/docs/installation/tailwind-cli)
+seguir el ejemplo de: [tailwind](https://tailwindcss.com/docs/installation/tailwind-cli)
+
+## Correr
+
+```bash
+flask --app volansapp.app run --host=0.0.0.0 --port=8080
+```
